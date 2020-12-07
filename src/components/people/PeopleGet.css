@@ -1,0 +1,8 @@
+.hire-background {
+    background-image: url("https://www.health.harvard.edu/media/content/images/p7_Peanuts_H1906_gi886697776(1).jpg");
+    width : 100%;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-size: cover;
+  }

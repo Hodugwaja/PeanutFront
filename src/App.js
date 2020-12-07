@@ -8,6 +8,7 @@ import List from './pages/List'
 import UpdateLog from './pages/UpdateLog'
 import MyPage from './pages/writePage'
 import EasterGaram from './pages/Eastergaram';
+import Hire from './pages/Hire'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Route component = {List} path = '/List' />
       <Route component = {UpdateLog} path = '/@username:postId' />
       <Route component = {MyPage} path = '/write'/>
+      <Route component = {Hire} path = '/hire'/>
       <Route component = {EasterGaram} path = '/abc1203928392898993310dhfuhfauafhua123932919dhj1h2hj32j'/>
       
     </>

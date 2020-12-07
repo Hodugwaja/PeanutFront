@@ -12,14 +12,14 @@ import HeaderContainer from '../containers/common/HeaderContainer'
 
 const Master = styled.div`
 
-	font-family: 'MapoFlowerIsland';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+@import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+
+* {
+ font-family: 'Hanna', fantasy;
+}
 	
 `;
 
-var gobin = false;
 const Introduce = () => {	
 	const style = {
 		margin: '15px',
@@ -94,7 +94,7 @@ const Introduce = () => {
 										<img src="https://cdn.discordapp.com/avatars/443734180816486441/b87bc59fe1a1de7da5756a557760b2c4.webp?size=256" alt="" />
 									</a>
 									<div className="caption">
-										<p className = "PM" style = {{color : "gold"}}>땅콩(PM) </p>
+										<h3>땅콩(PM) </h3>
 										<p>학생 개발자이자 팀 대표, 땅콩입니다.</p>
 										<ul className ="actions fixed">
 											<li><span className ="button small">{teamButton}</span></li>
@@ -102,8 +102,8 @@ const Introduce = () => {
 									</div>
 								</article>
 								<article >
-									<a href="https://github.com/JiYeong11" className="image">
-										<img src="https://cdn.discordapp.com/avatars/557119176590884864/a_2a5e3920ad489064f2b50630ce050ab1.gif?size=256" alt="" />
+									<a className="image">
+										<img src="https://cdn.discordapp.com/avatars/557119176590884864/a_82d38e9364084c01c61e09c83e01fe9b.gif?size=256" alt="" />
 									</a>
 									<div className="caption">
 										<h3>지영</h3>
@@ -114,7 +114,7 @@ const Introduce = () => {
 									</div>
 								</article>
 								<article>
-									<a href="https://github.com/bangsejun" className="image">
+									<a className="image">
 										<img src="https://media.discordapp.net/attachments/754181625776046146/778546208780058624/emote-6.png?width=677&height=677" alt="" />
 									</a>
 									<div className = "caption">
@@ -126,12 +126,62 @@ const Introduce = () => {
 									</div>
 								</article>
 								<article>
-									<a href="https://github.com/ensuta" className = "image">
-										<img src="https://cdn.discordapp.com/avatars/401532480278102027/19ddf68d07bc666121cf62dcda95f761.webp?size=256" alt="" />
+									<a className = "image">
+										<img src="https://cdn.discordapp.com/avatars/734560292024877056/b13b89124afe37b63904ba829cbf0b57.webp?size=256" alt="" />
 									</a>
 									<div className = "caption">
-										<h3>ensuta</h3>
-										<p>해커, 보안 <br/>담당 데스</p>
+										<h3>블렉카이</h3>
+										<p>(아직 없음)</p>
+										<ul className = "actions fixed">
+											<li><span className = "button small">{teamButton}</span></li>
+										</ul>
+									</div>
+								</article>
+							</div>
+							<div className="gallery style2 medium onscroll-fade-in">
+								<article>
+									<a className="image">
+										<img src="https://cdn.discordapp.com/avatars/740138708707049483/00bca3f91de8d08c16f68a86b21534d7.webp?size=256" alt="" />
+									</a>
+									<div className="caption">
+										<h3>Hyper</h3>
+										<p>유니티는 갓이다</p>
+										<ul className ="actions fixed">
+											<li><span className ="button small">{teamButton}</span></li>
+										</ul>
+									</div>
+								</article>
+								<article >
+									<a className="image">
+										<img src="https://cdn.discordapp.com/avatars/719003738228129832/858410cb4764deedbf5aa7185e5c64f9.webp?size=256" alt="" />
+									</a>
+									<div className="caption">
+										<h3>Cord</h3>
+										<p>코딩을 하고 싶은 디스코드 봇 만드는 사람</p>
+										<ul className="actions fixed">
+											<li><span className="button small">{teamButton}</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a className="image">
+										<img src="https://cdn.discordapp.com/avatars/524515155254444032/a_53cbea39530a2c10e383ef50a8589d72.gif?size=256" alt="" />
+									</a>
+									<div className = "caption">
+										<h3>BainBble0211</h3>
+										<p>(아직 없음)</p>
+										<ul className = "actions fixed">
+											<li><span className = "button small">{teamButton}</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a className = "image">
+										<img src="https://cdn.discordapp.com/avatars/514800004414570506/a244a65b64b8800b81ddae266e333408.webp?size=256" alt="" />
+									</a>
+									<div className = "caption">
+										<h3>안녕</h3>
+										<p>(아직 없음)</p>
 										<ul className = "actions fixed">
 											<li><span className = "button small">{teamButton}</span></li>
 										</ul>
@@ -142,21 +192,8 @@ const Introduce = () => {
 							<h3><strong>웹 개발팀</strong></h3>
 							<p>해당 홈페이지를 제작, 담당합니다</p>
 							<div className = "gallery style2 medium onscroll-fade-in">
-								
 								<article >
-									<a href="https://github.com/pikokr" className = "image">
-										<img src="https://cdn.discordapp.com/avatars/628595345798201355/a_981b316e32a0945fe327b506dcb72a11.gif?size=256" alt="" />
-									</a>
-									<div className = "caption">
-										<h3>파랑 - Back</h3>
-										<p>치노를 좋아하는 10덕입니다</p>
-										<ul className = "actions fixed">
-											<li><span className = "button small">{teamButton}</span></li>
-										</ul>
-									</div>
-								</article>
-								<article >
-									<a href="https://github.com/cropMr" className="image">
+									<a className="image">
 										<img src="https://imgur.com/M0KveU6.jpg" alt="" />
 									</a>
 									<div className ="caption">
@@ -167,40 +204,109 @@ const Introduce = () => {
 										</ul>
 									</div>
 								</article>
+
 								<article>
-									<a href="https://github.com/nyaco0125" className = "image">
-										<img src="https://cdn.discordapp.com/avatars/727486102587310102/c53e5aeaf0b849d9417092292b0e95cf.webp?size=256" alt="" />
+									<a className = "image">
+										<img src="https://cdn.discordapp.com/avatars/401532480278102027/19ddf68d07bc666121cf62dcda95f761.webp?size=256" alt="" />
 									</a>
 									<div className = "caption">
-										<p className = "PM" style = {{color : "gold"}}>냐코(PM) - Design</p>
-										<p>냐코는 노잼!</p>
+										<h3>Enusta</h3>
+										<p>해킹, 보안 담당 데스</p>
 										<ul className = "actions fixed">
 											<li><span className = "button small">{teamButton}</span></li>
 										</ul>
 									</div>
 								</article>
+
 								<article>
-									<button onClick = {() => alert("깃헙 계정이 읎어요")} onMouseEnter = {() => gobin = true} onMouseLeave = {() => gobin = false}>
-										{
-											gobin === true ? (
-												<img src = "https://cdn.discordapp.com/avatars/761220557160579102/38401cf0f5dfe3d08c66d5a8599e1768.webp?size=256" alt = "꼬빈 평상시"/>
-											):(
-												<img src = "https://cdn.discordapp.com/avatars/761220557160579102/94d3883c7d49f9bbcca6d8e03726f0c1.webp?size=256" alt = "꼬빈 각성"/>
-											)
-										}
-									</button>
+									<a className = "image">
+										<img src="https://cdn.discordapp.com/avatars/628595345798201355/7e7863c93dbe6246d344160518f129d7.webp?size=256" alt="" />
+									</a>
 									<div className = "caption">
-										<h3>버그 - Design</h3>
-										<p>이 프사 바퀴벌레 얼굴임 ㅅㄱ~</p>
+										<h3>파랑이</h3>
+										<p>치노 좋아하는 10덕입니다</p>
+										<ul className = "actions fixed">
+											<li><span className = "button small">{teamButton}</span></li>
+										</ul>
+									</div>
+								</article>
+								
+								<article>
+									<a className = "image">
+										<img src="https://cdn.discordapp.com/avatars/299895531701010442/f2e502746c0c14c2be0f81f744fcabfc.webp?size=256" alt="" />
+									</a>
+									<div className = "caption">
+										<h3>스톰</h3>
+										<p>(여친 있음)</p>
 										<ul className = "actions fixed">
 											<li><span className = "button small">{teamButton}</span></li>
 										</ul>
 									</div>
 								</article>
 							</div>
+
+							<br /><br /><br />
+						<h3><strong>디자인팀</strong></h3>
+							<p>홈페이지 제작, 봇 일러스트 등을 짭니다</p>
+							<div className = "gallery style2 medium onscroll-fade-in">
+								<article >
+									<a className="image">
+										<img src="https://cdn.discordapp.com/avatars/727486102587310102/90ed4efa7798ae7f99aca26f046d0002.webp?size=256" alt="" />
+									</a>
+									<div className ="caption">
+										<h3>냐코</h3>
+										<p>냐코는 잼민이~</p>
+										<ul className="actions fixed">
+											<li><span className="button small">{teamButton}</span></li>
+										</ul>
+									</div>
+								</article>
+								
+								<article>
+									<a className = "image">
+										<img src="https://cdn.discordapp.com/avatars/761220557160579102/8c9e4c942aa84a593cbe49b27345e833.webp?size=256" alt="" />
+									</a>
+									<div className = "caption">
+										<h3>버그</h3>
+										<p>바퀴벌레임 ㅅㄱ</p>
+										<ul className = "actions fixed">
+											<li><span className = "button small">{teamButton}</span></li>
+										</ul>
+									</div>
+								</article>
+
+								<article>
+									<a className = "image">
+										<img src="https://cdn.discordapp.com/avatars/748542279941357578/612d5e459aee6b2099d9d71f05ceed45.webp?size=256" alt="" />
+									</a>
+									<div className = "caption">
+										<h3>팔구</h3>
+										<p>(아직 없음)</p>
+										<ul className = "actions fixed">
+											<li><span className = "button small">{teamButton}</span></li>
+										</ul>
+									</div>
+								</article>
+								
+								<article>
+									<a className = "image">
+										<img src="" alt="" />
+									</a>
+									<div className = "caption">
+										<h3>공석</h3>
+										<p>여러분이 될 수 있습니다.<br/>어서 지원해보세요</p>
+										<ul className = "actions fixed">
+											<Link to = "/hire"><span className = "button small">지원</span></Link>
+										</ul>
+									</div>
+								</article>
+							</div>
+							<br/><br/><br/>
+							<Link to = "/hire"><h3><strong>나도 지원하기</strong></h3></Link>
 						</section>
 				</div>
 					<br/><br/><br/><br/><br/>
+
 
 					<footer className = "wrapper style1 align-center">
 						<div className = "inner">
