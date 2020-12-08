@@ -87,7 +87,7 @@ li{
 
 `;
 
-const PeopleGet = ({children}) => {
+const PeopleGet = () => {
     let history = useHistory();
     const handleBot = () => {
         history.push({
@@ -102,7 +102,7 @@ const PeopleGet = ({children}) => {
     }
     const handleBack = () => {
         history.push({
-            pathname: "/Back",
+            pathname: "/BackEnd",
         })
     }
     const handleIllust = () => {
@@ -125,10 +125,17 @@ const PeopleGet = ({children}) => {
                     <li onClick={() => Swal.fire('모솔', '솔로천국!, 커플지옥!', 'question')}><a>모솔인 사람</a></li>
                 </ul>
                 
-                <h1 class="recruit_role">해택</h1>
+                <h1 class="recruit_role">혜택</h1>
                 <hr />
                 <div><li onClick={() => Swal.fire('유료기능', '봇이 개발중이라서 미정', 'question')}><a>팀 땅콩봇 유료기능 사용 가능</a></li></div>
-                <div><li onClick={() =>Swal.fire('디스코드 Nitro', '기여도가 제일 높은 사람은 머장이 니트로 줌(ㅆㄱㄴ)', 'question')}><a>매월 기여도가 높은 사람에게 디스코드 Nitro증정</a></li></div>
+                <div><li onClick={() =>Swal.fire({
+                    title: '디스코드 니트로',
+                    text: '기여도가 제일 높은 사람에게 니트로 줌(ㅆㄱㄴ)',
+                    imageUrl: 'https://imgur.com/T00GHu9.jpg',
+                    imageWidth: 300,
+                    imageHeight: 300,
+                    imageAlt: 'ㅆㄱㄴ ㅆㄱㄴ ㅆㄱㄴ',
+                })}><a>매월 기여도가 높은 사람에게 디스코드 Nitro증정</a></li></div>
                 
                 
                 <h1 class="recruit_role">모집분야</h1>
@@ -147,3 +154,11 @@ const PeopleGet = ({children}) => {
 
 
 export default PeopleGet;
+
+/*
+
+1. 작업물 준비(Github 링크, 포트폴리오 파일 등)
+2. 땅콩#1283 에게 디스코드 친구추가 
+3. 간단한 면접 후 결과 통보
+4. 합격시 정식 개발자(혹은 디자이너) 임명
+*/

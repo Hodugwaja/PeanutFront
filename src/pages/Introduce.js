@@ -1,26 +1,33 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useSelector, useDispatch } from 'react-redux';
 import {Link} from 'react-router-dom';
 import '../assets/css/Animate.css'
 import './CSS/main.css'
 //import StyledText from  '../assets/js/AnimatedText'
 import HeaderContainer from '../containers/common/HeaderContainer'
+import palette from '../lib/styles/palette';
+import Swal from 'sweetalert2'
 
 
 // ngrok http 3000 -host-header=localhost
 // ssh -R :6001:10.156.145.147:3000 -p 2222 root@piko.app
 
 const Master = styled.div`
-
+margin-left : 10%;
+margin-right : 10%;
 @import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+border : 1px solid ${palette.gray[2]};
 
 * {
  font-family: 'Hanna', fantasy;
+ outline : none;
 }
 	
 `;
 
 const Introduce = () => {	
+	const { user } = useSelector(({ user }) => ({ user: user.user }));
 	const style = {
 		margin: '15px',
 	};
@@ -42,9 +49,8 @@ const Introduce = () => {
 							<p>재밌는 디스코드 경험을 해보시고 싶으신가요? <br/>그 여정에 저희 TEAM 땅콩이 함께 하고 싶습니다!</p>
 							<p>-팀 땅콩 대표 땅콩</p>
 							<ul className="actions stacked">
-							<Link to = '/login'><li><button className = "button" style = {style}>로그인</button></li></Link>
-							{easterEgg > 1 ? (<a href = "https://discord.gg/Cp5jduJZMn" target = "blank"><button className = "button">팀 땅콩 유저 커뮤니티</button></a>)
-							:(<a href = "https://team-peanut-unofficial.piko.ml/" rel = "noreferrer" target = "blank"><li><button className = "button">비공식 사이트 가기</button></li></a>)}
+							{user ? (<div><div>{user.username}님 어서오세요</div> <br/></div>):(<Link to = '/login'><li><button className = "button" style = {style}>로그인</button></li></Link>)}
+							{easterEgg > 1 ? (<a href = "https://discord.gg/Cp5jduJZMn" target = "blank"><button className = "button">팀 땅콩 유저 커뮤니티</button></a>):(<a href = "https://team-peanut-unofficial.piko.ml/" rel = "noreferrer" target = "blank"><li><button className = "button">비공식 사이트 가기</button></li></a>)}
 							</ul>
 						</div>
 						<div className="image">
@@ -58,7 +64,11 @@ const Introduce = () => {
 							<p>기능이 너무 다양해서 <br/>무엇을 하는 봇인지 궁금할 정도의 봇</p>
 							<ul className = "actions stacked">
 								<li><button className = "button">소개보기</button></li>
-								<li><button className ="button" onClick = {() => alert("제작 중인 시스템입니다")}>제작중</button></li>
+								<li><button className ="button" onClick = {() => Swal.fire({
+									icon: 'error',
+									title: '죄송합니다',
+									text: '아직 제작 하지 않아 초대가 불가능합니다',
+									})}>제작중</button></li>
 							</ul>
 						</div>
 						<div className = "image">
@@ -72,7 +82,11 @@ const Introduce = () => {
 							<p>팀땅콩 내 봇 팀은 봇을 통하여 한 일과 하고 있는 작업 기재(예정)</p>
 							<ul className ="actions stacked">
 								<li><button className ="button">소개 보기</button></li>
-								<li><button className ="button" onClick = {() => alert("제작 중인 시스템입니다")}>제작중</button></li>
+								<li><button className ="button" onClick = {() => Swal.fire({
+									icon: 'error',
+									title: '죄송합니다',
+									text: '아직 제작 하지 않아 초대가 불가능합니다',
+									})}>제작중</button></li>
 							</ul>
 						</div>
 						<div className ="image">
@@ -84,7 +98,7 @@ const Introduce = () => {
 						<section className = "wrapper style1 align-center">
 							<div className = "inner">
 								<h2>팀 땅콩 팀원들</h2>
-								<p>내용</p>
+								<p onClick = {() => alert("사실은 팀 땅콩을 위해 열심히 갈리는 노예들입니다\n살려주세요.....")}>팀 땅콩을 위해 열심히 일하는 팀원<span style={{textDecoration: 'line-through'}}>(노예)</span>들 입니다</p>
 							</div>
 							<h3><strong>봇 개발팀</strong></h3>
 							<p>평범하게 봇을 개발하는 팀입니다</p>

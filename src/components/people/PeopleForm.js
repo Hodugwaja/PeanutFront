@@ -4,6 +4,9 @@ import {Link} from 'react-router-dom';
 
 const HireForm = styled.div`
     margin: 0;
+    text-align : center;
+    @import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+    margin: 0;
     height: 100%;
 
 
@@ -60,36 +63,59 @@ const HireForm = styled.div`
 }
 
 `;
-const peopleForm = ({children}) => {
+const peopleForm = ({name, description, number, type}) => {
     return(
         <HireForm>
                 <div class="hook">
-                    <h1 class="hook_title">[모집중] 프론트엔드 개발자</h1>
-                    <p> 팀 땅콩의 멋진 웹사이트 프론트엔드에 대하여 모든것을 담당합니다.<br/>우리의 멋진 웹사이트를 더욱더 빛나게 만들어주세요!<br/>백엔드에 대해 이해가 있다면 최고에요!</p>
+                    <h1 class="hook_title">[모집중] {name}</h1>
+                    {description}                
                 </div>
                 <div class="container">
-                    <h1 class="title">프론트엔드 개발자</h1>
-                    <hr>
+                    <h1 class="title">{name}</h1>
+                    <hr />
                     <h1 class="how_many">모집 인원</h1>
-                    <p>9999명</p>
-                    <h1 class="necessory">자격 요건</h1>
-                    <ul class="necessory_skills">
-                        <li>HTML.CSS.JS를 유연히 다룰 수 있음</li>
-                        <li>React.js를 유연히 다룰 수 있음</li>
-                        <li>기타등등 어쩌구 알아서 적으셈</li>
-                    </ul>
-                    <h1 class="advantage">우대 사항</h1>
-                    <ul class="advantage_skills">
-                        <li>백엔드에 대한 이해</li>
-                        <li>어쩌구 저쩌구 샬라샬라</li>
-                    </ul>
+                    <p>{number}명</p>
+
+                    {type === "Web "? 
+                        (
+                            <div>
+                                <h1 class="necessory">자격 요건</h1>
+                                <ul class="necessory_skills">
+                                    <li>HTML.CSS.JS를 유연히 다룰 수 있음</li>
+                                    <li>인성과 새로운 것을 배울 열정, 소통 의지</li>
+                                </ul>
+                                <h1 class="advantage">우대 사항</h1>
+                                <ul class="advantage_skills">
+                                    <li>React.js에 대한 이해(프론트)</li>
+                                    <li>node.js, mongoDB 사용(백)</li>
+                                </ul>
+                            </div>
+                        )
+                        :( 
+                            <div>
+                                <h1 class="necessory">자격 요건</h1>
+                                <ul class="necessory_skills">
+                                    <li>HTML.CSS.JS를 유연히 다룰 수 있음</li>
+                                    <li>인성과 새로운 것을 배울 열정, 소통 의지</li>
+                                </ul>
+                                <h1 class="advantage">우대 사항</h1>
+                                <ul class="advantage_skills">
+                                    <li>React.js에 대한 이해(프론트)</li>
+                                    <li>node.js, mongoDB 사용(백)</li>
+                                </ul>
+                            </div>
+                        )
+                    
+                    }
+                   
                     <h1 class="how_to">지원 방법</h1>
                     <ol class="how_to_lists">
                         <li>이메일</li>
-                        <li>디코</li>
-                        <li>아 힘들다</li>
+                        <li>디스코드 땅콩#1283 친구추가 후 DM으로 연락</li>
                     </ol>
                 </div>
         </HireForm>
     );
 }
+
+export default peopleForm;

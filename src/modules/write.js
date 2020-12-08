@@ -1,5 +1,10 @@
 import {createAction, handleActions} from 'redux-actions';
 
+import CreateRequestSaga, {
+    CreateRequestSaga
+} from '../lib/createRequestSaga';
+import * as postsAPI from '../lib/api/posts'
+
 const INITALIZE = 'write/INITALIZE';
 const CHANGE_FIELD = 'write/CHANGE_FIELD';
 
