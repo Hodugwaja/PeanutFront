@@ -6,18 +6,16 @@ import Swal from 'sweetalert2'
 import './PeopleGet.css'
 
 const People = styled.div`
-    margin: 0;
+
+    margin-left: 10%;
+    margin-right: 10%;
     text-align : center;
     @import url(//fonts.googleapis.com/earlyaccess/hanna.css);
-
-* {
- font-family: 'Hanna', fantasy;
-}
+     font-family: 'Hanna', fantasy;
 	
 a{
     cursor : pointer;
 }
-
 .container{
     justify-content: center;
     text-align: center;
@@ -54,10 +52,8 @@ hr{
 
 .recruit_lists a{
     text-decoration: none;
-    color: black;
-    padding: 8px 12px;
-    margin: 8px 12px;
-    font-size: 24px;
+    margin: 8px;
+    font-size: 20px;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 700;
 }
@@ -80,14 +76,16 @@ li{
     justify-content: center;
     margin-bottom: 100px;
     text-decoration: none;
-    color: black;
     padding: 8px 12px;
     margin: 8px 12px;
+}
+li .none{
+    color : red;
 }
 
 `;
 
-const PeopleGet = () => {
+const PeopleGet = ({front, back, bot, illust}) => {
     let history = useHistory();
     const handleBot = () => {
         history.push({
@@ -108,6 +106,14 @@ const PeopleGet = () => {
     const handleIllust = () => {
         history.push({
             pathname: "/Illust",
+        })
+    }
+    const nope = () => {
+        Swal.fire({
+            icon: 'error',
+            title: '죄송합니다',
+            text: '현재 해당 역할을 모집을 받지 않습니다',
+            footer : '팀 땅콩 드림'
         })
     }
     return(
@@ -141,10 +147,10 @@ const PeopleGet = () => {
                 <h1 class="recruit_role">모집분야</h1>
                 <hr />
                 <ul class="recruit_lists">
-                    <li onClick={() => handleBot()}><a>Bot Developer</a></li>
-                    <li onClick={() => handleFront()}><a>FrontEnd Developer</a></li>
-                    <li onClick={() => handleBack()}><a>BackEnd Developer</a></li>
-                    <li onClick={() => handleIllust()}><a>Illustrator</a></li>
+                    {bot === "true" ? (<li onClick={() => handleBot()}><a>Bot Developer</a></li>) : (<li onClick={() => nope() }className = "none"><a>Bot Developer</a></li>)}
+                    {front === "true" ? (<li onClick={() => handleFront()}><a>FrontEnd Developer</a></li>) : (<li onClick={() => nope() }className = "none"><a>FrontEnd Developer</a></li>)}
+                    {back === "true" ? (<li onClick={() => handleBack()}><a>BackEnd Developer</a></li>) : (<li onClick={() => nope() } className = "none"><a>BackEnd Developer</a></li>)}
+                    {illust === "true" ? (<li onClick={() => handleIllust()}><a>Designer</a></li>) : (<li onClick={() => nope() }className = "none"><a>Designer</a></li>)}
                 </ul>
                 <p>가 족같고 자유로운 분위기를 추구하는 팀 땅콩, 어서 지원하세요!!!</p>
             </People>

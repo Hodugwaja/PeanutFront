@@ -6,7 +6,7 @@ const HireIllust = () => {
     return(
         <div>
             <HeaderContainer/>
-            <HireForm/>
+            <HireForm hire = "true" name = "디자이너(일러스트레이터)" description = "팀 땅콩 사이트를 디자인 또는 팀 봇 일러스트레이터" number = "1" type = "Illust"/>
         </div>
     )
 }

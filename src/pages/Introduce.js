@@ -8,6 +8,7 @@ import './CSS/main.css'
 import HeaderContainer from '../containers/common/HeaderContainer'
 import palette from '../lib/styles/palette';
 import Swal from 'sweetalert2'
+import Footer from '../components/common/Footer'
 
 
 // ngrok http 3000 -host-header=localhost
@@ -79,7 +80,7 @@ const Introduce = () => {
 					<section className ="spotlight style1 orient-right content-align-left image-position-center">
 						<div className ="content">
 							<h2>일정관리 봇</h2>
-							<p>팀땅콩 내 봇 팀은 봇을 통하여 한 일과 하고 있는 작업 기재(예정)</p>
+							<p>팀땅콩 내 봇 팀은 봇을 통하여 한 일과 하고 있는 작업 기재</p>
 							<ul className ="actions stacked">
 								<li><button className ="button">소개 보기</button></li>
 								<li><button className ="button" onClick = {() => Swal.fire({
@@ -99,6 +100,7 @@ const Introduce = () => {
 							<div className = "inner">
 								<h2>팀 땅콩 팀원들</h2>
 								<p onClick = {() => alert("사실은 팀 땅콩을 위해 열심히 갈리는 노예들입니다\n살려주세요.....")}>팀 땅콩을 위해 열심히 일하는 팀원<span style={{textDecoration: 'line-through'}}>(노예)</span>들 입니다</p>
+								<p>더 알아보기를 누르면 팀원의 소개글, 프로필을 볼 수 있습니다(자신이 직접 쓴거임 저는 하라는대로 함)</p>
 							</div>
 							<h3><strong>봇 개발팀</strong></h3>
 							<p>평범하게 봇을 개발하는 팀입니다</p>
@@ -145,7 +147,7 @@ const Introduce = () => {
 									</a>
 									<div className = "caption">
 										<h3>블렉카이</h3>
-										<p>(아직 없음)</p>
+										<p>아주 평범한 학생입니다</p>
 										<ul className = "actions fixed">
 											<li><span className = "button small">{teamButton}</span></li>
 										</ul>
@@ -183,7 +185,7 @@ const Introduce = () => {
 									</a>
 									<div className = "caption">
 										<h3>BainBble0211</h3>
-										<p>(아직 없음)</p>
+										<p>디스코드 봇 개발자</p>
 										<ul className = "actions fixed">
 											<li><span className = "button small">{teamButton}</span></li>
 										</ul>
@@ -195,9 +197,59 @@ const Introduce = () => {
 									</a>
 									<div className = "caption">
 										<h3>안녕</h3>
-										<p>(아직 없음)</p>
+										<p>매력적인 휴지통입니다</p>
 										<ul className = "actions fixed">
 											<li><span className = "button small">{teamButton}</span></li>
+										</ul>
+									</div>
+								</article>
+							</div>
+							<div className="gallery style2 medium onscroll-fade-in">
+								<article>
+									<a className="image">
+										<img src="https://cdn.discordapp.com/avatars/717044065635532810/3d0a9fa75e3645cdb0f741cb5fc0c898.webp?size=256" alt="" />
+									</a>
+									<div className="caption">
+										<h3>_Decave</h3>
+										<p>바보</p>
+										<ul className ="actions fixed">
+											<li><span className ="button small">{teamButton}</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a className = "image">
+										<img src="" alt="" />
+									</a>
+									<div className = "caption">
+										<h3>공석</h3>
+										<p>여러분이 될 수 있습니다.<br/>어서 지원해보세요</p>
+										<ul className = "actions fixed">
+											<Link to = "/hire"><span className = "button small">지원</span></Link>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a className = "image">
+										<img src="" alt="" />
+									</a>
+									<div className = "caption">
+										<h3>공석</h3>
+										<p>여러분이 될 수 있습니다.<br/>어서 지원해보세요</p>
+										<ul className = "actions fixed">
+											<Link to = "/hire"><span className = "button small">지원</span></Link>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a className = "image">
+										<img src="" alt="" />
+									</a>
+									<div className = "caption">
+										<h3>공석</h3>
+										<p>여러분이 될 수 있습니다.<br/>어서 지원해보세요</p>
+										<ul className = "actions fixed">
+											<Link to = "/hire"><span className = "button small">지원</span></Link>
 										</ul>
 									</div>
 								</article>
@@ -211,7 +263,7 @@ const Introduce = () => {
 										<img src="https://imgur.com/M0KveU6.jpg" alt="" />
 									</a>
 									<div className ="caption">
-										<h3>호두과자 - Front</h3>
+										<h3>호두과자</h3>
 										<p>프앤 개발자 <br/>호두과자입니다</p>
 										<ul className="actions fixed">
 											<li><span className="button small">{teamButton}</span></li>
@@ -251,7 +303,7 @@ const Introduce = () => {
 									</a>
 									<div className = "caption">
 										<h3>스톰</h3>
-										<p>(여친 있음)</p>
+										<p>왐마야</p>
 										<ul className = "actions fixed">
 											<li><span className = "button small">{teamButton}</span></li>
 										</ul>
@@ -291,7 +343,7 @@ const Introduce = () => {
 
 								<article>
 									<a className = "image">
-										<img src="https://cdn.discordapp.com/avatars/748542279941357578/612d5e459aee6b2099d9d71f05ceed45.webp?size=256" alt="" />
+										<img src="https://cdn.discordapp.com/avatars/748542279941357578/d19d1370d5844ba6512b6b14ebaf88a9.webp?size=256" alt="" />
 									</a>
 									<div className = "caption">
 										<h3>팔구</h3>
@@ -319,16 +371,9 @@ const Introduce = () => {
 							<Link to = "/hire"><h3><strong>나도 지원하기</strong></h3></Link>
 						</section>
 				</div>
-					<br/><br/><br/><br/><br/>
-
-
-					<footer className = "wrapper style1 align-center">
-						<div className = "inner">
-							<p>Footer 제작중...</p>
-						</div>
-					</footer>
-                
+					<br/><br/><br/><br/><br/>                
 			</div>
+			<Footer/>
 		</Master>
     );
 }

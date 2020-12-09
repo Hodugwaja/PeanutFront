@@ -6,7 +6,7 @@ const Hire = () => {
     return(
         <div>
             <HeaderContainer/>
-            <HireGet/>
+            <HireGet bot = "false" front = "true" back = "false" illust = "true"/>
         </div>
     )
 }
