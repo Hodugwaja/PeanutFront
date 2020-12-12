@@ -13,7 +13,7 @@ import HireFront from './pages/HireFront'
 import HireBack from './pages/HireBack'
 import HireBot from './pages/HireBot'
 import HireIllust from './pages/HireIlust'
-
+import listPage from './pages/PostPage'
 
 function App() {
   return (
@@ -29,6 +29,7 @@ function App() {
       <Route component = {HireBack} path = '/BackEnd'/>
       <Route component = {HireBot} path = '/bot'/>
       <Route component = {HireIllust} path = '/illust'/>
+      <Route component = {listPage} path = '/page'/>
       <Route component = {EasterGaram} path = '/abc1203928392898993310dhfuhfauafhua123932919dhj1h2hj32j'/>
       
     </>

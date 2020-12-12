@@ -1,7 +1,7 @@
 import React, {useEffect, useCallback} from 'react';
 import Editor from '../../components/write/Editor';
 import {useSelector, useDispatch} from 'react-redux';
-import {changeField, initalize} from '../../modules/write';
+import {changeField, initialize} from '../../modules/write';
 
 const EditContainer = () => {
     const dispatch = useDispatch();
@@ -16,7 +16,7 @@ const EditContainer = () => {
 
     useEffect(() => {
         return () => {
-            dispatch(initalize());
+            dispatch(initialize());
         };
     }, [dispatch]);
     return(

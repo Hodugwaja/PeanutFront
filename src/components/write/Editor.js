@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react';
+import React, { useRef, useEffect, useCallback } from 'react';
 import Quill from 'quill';
 import 'quill/dist/quill.bubble.css';
 import styled from 'styled-components';
@@ -47,14 +47,15 @@ const Editor = ({title, body, onChangeField}) => {
                 ],
             },
         });
-    }, []);
+        const quill = quillInstance.current;
+        quill.on('text-change', (delta, oldDelta, source) => {
+        if (source === 'user') {
+            onChangeField({ key: 'body', value: quill.root.innerHTML });
+        }
+        });
+    }, [onChangeField]);
 
-    const quill = quillInstance.current;
-    quill.on('text-change', (delta, oldDelta, source) => {
-        if(source === 'user'){
-            onChangeField({key : 'body', value : quill.root.innerHTML});
-        };
-    }, [onChangeField])
+    
     const onChangeTitle = e => {
         onChangeField({key : 'title', value : e.target.value});
     };
