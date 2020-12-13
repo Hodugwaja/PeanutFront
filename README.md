@@ -38,8 +38,10 @@
             - 디자인 : src/components/people/peopleForm.js
         - 따로 구인구직 세부정보
         - 이것도 안하니까 패스
-    - 이 외의 페이지
-        - 다른것들은 개발중이나 이스터에그로 있어서 왠만하면 건들지 마삼(제발)
+    - write
+        - 파일
+            - src/pages/writePage.js
+            - 디자인 : src/components/write/writeForm.js
 
 
 
