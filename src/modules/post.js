@@ -33,6 +33,10 @@ const post = handleActions(
         [READ_POST_FAILURE] : (state, {payload : error}) => ({
             ...state,
             error,
-        })
-    }
-)
+        }),
+        [UNLOAD_POST] : () => initalState,
+    },
+    initalState,
+);
+
+export default post;
