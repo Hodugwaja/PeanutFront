@@ -14,3 +14,18 @@ const SubInfoBlock = styled.div`
     padding-right : 0.25rem;
     content : '\\B7';
 `;
+
+const SubInfo = ({username, publishedDate, hasMarginTop }) => {
+    return(
+        <SubInfoBlock hasMarginTop = {hasMarginTop}>
+            <span>
+                <b>
+                    <Link to = {`/@${username}`}>{username}</Link>
+                </b>
+            </span>
+            <span>{new Date(publishedDate).toLocaleDateString()}</span>
+        </SubInfoBlock>
+    )
+}
+
+export default SubInfo;

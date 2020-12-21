@@ -51,7 +51,7 @@ const Introduce = () => {
 							<p>-팀 땅콩 대표 땅콩</p>
 							<ul className="actions stacked">
 							{user ? (<div><div>{user.username}님 어서오세요</div> <br/></div>):(<Link to = '/login'><li><button className = "button" style = {style}>로그인</button></li></Link>)}
-							{easterEgg > 1 ? (<a href = "https://discord.gg/TXDqdVbMAE" target = "blank"><button className = "button">팀 유니크코드 커뮤니티</button></a>):(<a href = "https://team-peanut-unofficial.piko.ml/" rel = "noreferrer" target = "blank"><li><button className = "button">비공식 사이트 가기</button></li></a>)}
+							{easterEgg > 1 ? (<a href = "https://discord.gg/TXDqdVbMAE" target = "blank"><button className = "button">유니크코드 커뮤니티</button></a>):(<a href = "https://team-peanut-unofficial.piko.ml/" rel = "noreferrer" target = "blank"><li><button className = "button">비공식 사이트 가기</button></li></a>)}
 							</ul>
 						</div>
 						<div className="image">
